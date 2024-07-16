@@ -1,29 +1,71 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:block_management/ui/components/bank_screen_components/offers.dart';
-import 'package:block_management/ui/screens/bank_screen/bank_screen.dart';
-import 'package:flutter/material.dart';
 
-void main(){
+import 'package:block_management/ui/bokking_app/bok_screens/bokking_home.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          color: Colors.blue,
-        )
-      ),
-      home: BankScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            appBarTheme: AppBarTheme(
+               systemOverlayStyle: SystemUiOverlayStyle(
+                  statusBarColor: Color(0xff000000),
+                  statusBarIconBrightness: Brightness.light,
+                ),
+          color: Color(0xff849cff),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(10),
+              bottomLeft: Radius.circular(20),
+            ),
+          ),
+        )),
+        home: BokkingHome());
   }
 }
+
+
+
+
+
+
+
+
+
+
+// import 'package:block_management/ui/components/bank_screen_components/offers.dart';
+// import 'package:block_management/ui/screens/bank_screen/bank_screen.dart';
+// import 'package:flutter/material.dart';
+
+// void main(){
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         appBarTheme: AppBarTheme(
+//           color: Colors.blue,
+//         )
+//       ),
+//       home: BankScreen(),
+//     );
+//   }
+// }
 
 // import 'package:block_management/ui/screens/bottom_sheet_screen/bottom_sheet.dart';
 // import 'package:flutter/material.dart';
